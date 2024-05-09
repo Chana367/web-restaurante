@@ -4,19 +4,197 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+}
+
+/* header */
 header{
   background-color: #DB5461;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 75px;
+  height: 75px;
+  margin-left: 5px;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
 }
 
 header nav ul li {
   display: inline-block;
 }
 
-nav a {
-  text-decoration: none;
+nav {
+ padding: 0px 10px;
 }
 
-.title-header {}
+nav a {
+  text-decoration: none;
+  color: #261748;
+  margin-right: 15px;
+}
+
+nav a:hover{
+  color: white;
+}
+
+.title-header {
+  font-weight: bold;
+  margin-top: 14px;
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* body */
+
+.hero {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+  ,url(./assets/img/restaurante.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; 
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.2em;
+}
+
+.hero p{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.button-hero{
+  font-weight: bold;
+  color: #DB5461;
+  background: white;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 22px;
+}
+
+.about-principal{
+  background-color: #DB5461;
+}
+
+.about-principal p{
+  margin: 0;
+  font-size: 1.2em;
+  color: white;
+  padding: 20px;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.about-container h2{
+  text-align: center;
+  font-size: 2.2em;
+}
+
+.about-container p{
+  font-size: 1.2em;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.galery-principal{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.galery-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.galery-container h2{
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
+
+.galery-container p{
+  font-size: 1.2em;
+}
+
+.galery-container h4{
+  font-size: 1.4em;
+  color: #ab85ff;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-container h2{
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
+
+.form-container h4{
+  font-size: 1.4em;
+  color: #ab85ff;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.form-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container{
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.img-galery {
+  width: 40vh;
+  height: 25vh;
+}
 
 /* Button whatsapp */
 .btn-wsp{
@@ -42,4 +220,78 @@ nav a {
   text-decoration: none;
   color: #0df053;
   background-color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+  font-weight: bold;
+  background-color: #DB5461;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #DB5461;
+  border: 2px solid black;
+}
+
+/* footer */
+
+.icon{
+  width: 25px;
+  height: 25px;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(189, 193, 198);
+}
+
+footer a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.data p{
+  margin-left: 7px;
+}
+
+.redes-sociales{
+  margin-top: 10px;
+}
+
+.redes-sociales a{
+  display: inline-block;
+}
+
+.date-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.date-container p {
+  margin-left: 7px;
+  cursor: default;
 }
