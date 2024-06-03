@@ -9,40 +9,25 @@ body {
 }
 
 /* header */
-header{
-  background-color: #DB5461;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+nav {
+  background: #DB5461 !important;
 }
 
-.logo{
+.logo {
   width: 75px;
   height: 75px;
   margin-left: 5px;
 }
 
-.container-logo {
-  display: flex;
-  align-items: center;
-}
-
-header nav ul li {
-  display: inline-block;
-}
-
-nav {
- padding: 0px 10px;
-}
-
-nav a {
+.nav-link.active {
   text-decoration: none;
-  color: #261748;
+  color: #261748 !important;
   margin-right: 15px;
 }
 
-nav a:hover{
-  color: white;
+.nav-link:hover {
+  color: white !important;
 }
 
 .title-header {
@@ -54,6 +39,23 @@ nav a:hover{
   cursor: pointer;
 }
 
+@media screen and (max-width: 380px){
+  .logo{
+    width: 45px;
+    height: 45px;
+  }
+
+  .title-header {
+    font-size: 0.7em;
+    margin-left: 0;
+  }
+
+  .video-container iframe{
+    width: 285px;
+    margin: auto;
+  }
+}
+
 /* body */
 
 .hero {
@@ -63,15 +65,12 @@ nav a:hover{
   flex-direction: column;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-  )
-  ,url(../assets/img/restaurante.jpeg);
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../assets/img/restaurante.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
   color: white;
 }
 
@@ -79,125 +78,73 @@ nav a:hover{
   font-size: 2.2em;
 }
 
-.hero p{
+.hero p {
   text-align: center;
   font-size: 1.2em;
 }
 
-.button-hero{
+.button-hero {
   font-weight: bold;
-  color: #DB5461;
-  background: white;
+  color: white;
+  background: #DB5461;
   text-decoration: none;
   border-radius: 50%;
   padding: 22px;
 }
 
-.about-principal{
+.button-hero:hover{
+  color: #DB5461;
+  background: white;
+}
+
+.about-principal {
   background-color: #DB5461;
 }
 
-.about-principal p{
+.about-principal p {
   margin: 0;
   font-size: 1.2em;
   color: white;
   padding: 20px;
 }
 
-.about-container{
+/* Card index */
+.card-container {
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.about-container h2{
-  text-align: center;
-  font-size: 2.2em;
+.img-card {
+  width: 36vh;
+  height: 25vh;
 }
 
-.about-container p{
-  font-size: 1.2em;
+/* Galery */
+.img-galery {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
 }
 
-.about-container{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-}
-
-.galery-principal{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.galery-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.galery-container h2{
-  text-align: center;
-  font-size: 2.2em;
-  margin-bottom: 0;
-}
-
-.galery-container p{
-  font-size: 1.2em;
-}
-
-.galery-container h4{
-  font-size: 1.4em;
+.title-page{
   color: #ab85ff;
-  text-align: center;
-  margin-top: 2px;
 }
 
-.form-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
-.form-container h2{
-  text-align: center;
-  font-size: 2.2em;
-  margin-bottom: 0;
-}
-
-.form-container h4{
-  font-size: 1.4em;
+.form-container h4 {
   color: #ab85ff;
-  text-align: center;
-  margin-top: 2px;
 }
 
-.form-button-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.video-container{
+.video-container {
   display: flex;
   justify-content: center;
   padding: 30px 20px;
 }
 
-.img-galery {
-  width: 40vh;
-  height: 25vh;
-}
-
 /* Button whatsapp */
-.btn-wsp{
+.btn-wsp {
   position: fixed;
   width: 55px;
   height: 55px;
@@ -216,7 +163,7 @@ nav a:hover{
   align-items: center;
 }
 
-.btn-wsp:hover{
+.btn-wsp:hover {
   text-decoration: none;
   color: #0df053;
   background-color: #fff;
@@ -227,12 +174,12 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -243,7 +190,8 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 100%;
 }
 
 input[type="submit"]:hover {
@@ -254,12 +202,12 @@ input[type="submit"]:hover {
 
 /* footer */
 
-.icon{
+.icon {
   width: 25px;
   height: 25px;
 }
 
-footer{
+footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "contacto horarios mapa";
@@ -267,29 +215,29 @@ footer{
   padding: 20px;
 }
 
-hr{
+hr {
   display: none;
 }
 
 @media (max-width: 800px) {
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  hr{
+  hr {
     display: block;
     width: 100%;
     margin: 20px 0;
     height: 1px;
     background-color: black;
   }
-  
+
 }
 
-footer a{
+footer a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -299,19 +247,19 @@ footer a{
   grid-area: contacto;
 }
 
-.data p{
+.data p {
   margin-left: 7px;
 }
 
-.redes-sociales{
+.redes-sociales {
   margin-top: 10px;
 }
 
-.redes-sociales a{
+.redes-sociales a {
   display: inline-block;
 }
 
-.date-container{
+.date-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -323,6 +271,6 @@ footer a{
   cursor: default;
 }
 
-.map{
+.map {
   grid-area: mapa;
 }
