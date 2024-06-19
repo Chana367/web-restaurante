@@ -76,6 +76,11 @@
 
   .img-card {
     @include sizes(36vh, 25vh);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .img-card:hover {
+    transform: scale(1.2); 
   }
 }
 
@@ -85,6 +90,11 @@
   .img-galery {
     @include sizes(100%, 250px);
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .img-galery:hover {
+    transform: scale(1.1);
   }
 
   .title-page {

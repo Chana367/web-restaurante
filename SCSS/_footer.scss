@@ -37,6 +37,31 @@ footer {
       margin-top: 10px;
       a {
         display: inline-block;
+        i{
+          text-align: center;
+          font-size: 25px;
+          color: black;
+          margin: 20px;
+          border-radius: 50%;
+          padding: 15px;
+          box-shadow: 0px 5px 10px rgb(0, 0, 0, .35);
+          transition: .3s ease;
+        }
+        @each $name-color, $bg-color in $color-redes-sociales {
+          .fa-#{$name-color}:hover{
+            @if ($name-color == 'instagram'){
+              background-image: $bg-color;
+            }
+            @else{
+              background-color: $bg-color;
+            }
+            color: white;
+            box-shadow: 0 0 15px $bg-color,
+                        0 0 45px $bg-color,
+                        0 0 75px $bg-color,
+                        0 0 115px $bg-color;
+          }
+        }
       }
     }
   }

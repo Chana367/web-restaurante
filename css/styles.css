@@ -1,5 +1,6 @@
 /* Fuentes */
 /*Colores*/
+/* Maps */
 /*Estilos reset*/
 * {
   font-family: "Fira Code", monospace;
@@ -105,6 +106,10 @@ nav {
 .card-container .img-card {
   width: 36vh;
   height: 25vh;
+  transition: transform 0.3s ease-in-out;
+}
+.card-container .img-card:hover {
+  transform: scale(1.2);
 }
 
 /* Galery */
@@ -112,6 +117,10 @@ nav {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.galery-container .img-galery:hover {
+  transform: scale(1.1);
 }
 .galery-container .title-page {
   color: #ab85ff;
@@ -212,6 +221,31 @@ footer .data .redes-sociales {
 }
 footer .data .redes-sociales a {
   display: inline-block;
+}
+footer .data .redes-sociales a i {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  margin: 20px;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+footer .data .redes-sociales a .fa-facebook:hover {
+  background-color: #1877f2;
+  color: white;
+  box-shadow: 0 0 15px #1877f2, 0 0 45px #1877f2, 0 0 75px #1877f2, 0 0 115px #1877f2;
+}
+footer .data .redes-sociales a .fa-instagram:hover {
+  background-image: linear-gradient(to top, #FDCB5D, #FD5949, #E1306C, #833AB4, #4C68D7);
+  color: white;
+  box-shadow: 0 0 15px linear-gradient(to top, #FDCB5D, #FD5949, #E1306C, #833AB4, #4C68D7), 0 0 45px linear-gradient(to top, #FDCB5D, #FD5949, #E1306C, #833AB4, #4C68D7), 0 0 75px linear-gradient(to top, #FDCB5D, #FD5949, #E1306C, #833AB4, #4C68D7), 0 0 115px linear-gradient(to top, #FDCB5D, #FD5949, #E1306C, #833AB4, #4C68D7);
+}
+footer .data .redes-sociales a .fa-whatsapp:hover {
+  background-color: #0df053;
+  color: white;
+  box-shadow: 0 0 15px #0df053, 0 0 45px #0df053, 0 0 75px #0df053, 0 0 115px #0df053;
 }
 footer .horarios {
   display: flex;
