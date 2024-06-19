@@ -1,0 +1,37 @@
+/* Medias Query */
+
+@media screen and (max-width: 380px){
+  .logo{
+    width: 45px;
+    height: 45px;
+  }
+
+  .title-header {
+    font-size: 0.7em;
+    margin-left: 0;
+  }
+
+  .video-container iframe{
+    width: 285px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    hr {
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+      height: 1px;
+      background-color: black;
+    }
+    .map{
+      width: 100%;
+    }
+  }
+}

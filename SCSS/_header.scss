@@ -1,0 +1,32 @@
+/* Estilos Header */
+nav {
+  background: $color-principal !important;
+}
+
+.title-header {
+  font-weight: bold;
+  margin-top: 14px;
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: $color-title-logo;
+  cursor: pointer;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  margin-left: 5px;
+}
+
+.nav-link.active {
+  text-decoration: none;
+  color: $color-nav-item-active !important;
+}
+
+.nav-link:hover {
+  color: $color-nav-item-active !important;
+}
+
+.nav-link {
+  color: $color-nav-item;
+}

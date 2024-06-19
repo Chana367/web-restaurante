@@ -1,0 +1,150 @@
+/*Estilos Body*/
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../assets/img/restaurante.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  h1 {
+    font-size: 2.2em;
+    color: $color-text-title;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    color: $color-text;
+  }
+
+  .button-hero {
+    font-weight: bold;
+    color: $color-secundario;
+    background: $color-principal;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 22px;
+  }
+
+  .button-hero:hover {
+    color: $color-principal;
+    background: $color-secundario;
+  }
+}
+
+/* About Principal */
+.about-principal {
+  background-color: $color-principal;
+
+  p {
+    margin: 0;
+    font-size: 1.2em;
+    color: $color-secundario;
+    padding: 20px;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+}
+
+/* Galery index */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .img-card {
+    width: 36vh;
+    height: 25vh;
+  }
+}
+
+/* Galery */
+
+.galery-container {
+  .img-galery {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .title-page {
+    color: $color-title-pages;
+  }
+}
+
+/* Formulario */
+
+.form-container {
+  h2 {
+    color: $color-title-pages;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    font-weight: bold;
+    background-color: $color-principal;
+    color: $color-secundario;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+
+  input[type="submit"]:hover {
+    background-color: $color-secundario;
+    color: $color-principal;
+    border: 2px solid $color-principal;
+  }
+}
+
+/* Button whatsapp */
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-wsp:hover {
+  text-decoration: none;
+  color: #0df053;
+  background-color: #fff;
+}

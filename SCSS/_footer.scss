@@ -1,0 +1,72 @@
+/*Estilos Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "contacto horarios mapa";
+  background-color: rgb(189, 193, 198);
+  padding: 20px;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .data {
+    grid-area: contacto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      margin-left: 7px;
+    }
+
+    .redes-sociales {
+      margin-top: 10px;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  .horarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .date-container {
+      grid-area: horarios;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start   ;
+      p {
+        margin-left: 7px;
+        cursor: default;
+      }
+    }    
+  }
+
+  .map {
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    iframe{
+      width: 90%;
+      height: 200px;
+    }
+  }
+}

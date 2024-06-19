@@ -1,3 +1,6 @@
+/* Fuentes */
+/*Colores*/
+/*Estilos reset*/
 * {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
@@ -8,26 +11,9 @@ body {
   margin: 0;
 }
 
-/* header */
-
+/* Estilos Header */
 nav {
   background: #DB5461 !important;
-}
-
-.logo {
-  width: 75px;
-  height: 75px;
-  margin-left: 5px;
-}
-
-.nav-link.active {
-  text-decoration: none;
-  color: white !important;
-  margin-right: 15px;
-}
-
-.nav-link:hover {
-  color: white !important;
 }
 
 .title-header {
@@ -39,25 +25,27 @@ nav {
   cursor: pointer;
 }
 
-@media screen and (max-width: 380px){
-  .logo{
-    width: 45px;
-    height: 45px;
-  }
-
-  .title-header {
-    font-size: 0.7em;
-    margin-left: 0;
-  }
-
-  .video-container iframe{
-    width: 285px;
-    margin: auto;
-  }
+.logo {
+  width: 75px;
+  height: 75px;
+  margin-left: 5px;
 }
 
-/* body */
+.nav-link.active {
+  text-decoration: none;
+  color: black !important;
+}
 
+.nav-link:hover {
+  color: black !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+/*Estilos Body*/
+/* Hero */
 .hero {
   display: flex;
   align-items: center;
@@ -65,25 +53,21 @@ nav {
   flex-direction: column;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(0deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)), url(../assets/img/restaurante.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/restaurante.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  color: white;
 }
-
 .hero h1 {
   font-size: 2.2em;
+  color: white;
 }
-
 .hero p {
   text-align: center;
   font-size: 1.2em;
+  color: white;
 }
-
-.button-hero {
+.hero .button-hero {
   font-weight: bold;
   color: white;
   background: #DB5461;
@@ -91,56 +75,78 @@ nav {
   border-radius: 50%;
   padding: 22px;
 }
-
-.button-hero:hover{
+.hero .button-hero:hover {
   color: #DB5461;
   background: white;
 }
 
+/* About Principal */
 .about-principal {
   background-color: #DB5461;
 }
-
 .about-principal p {
   margin: 0;
   font-size: 1.2em;
   color: white;
   padding: 20px;
 }
+.about-principal .video-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
 
-/* Card index */
+/* Galery index */
 .card-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
-.img-card {
+.card-container .img-card {
   width: 36vh;
   height: 25vh;
 }
 
 /* Galery */
-.img-galery {
+.galery-container .img-galery {
   height: 250px;
   object-fit: cover;
   width: 100%;
 }
-
-.title-page{
+.galery-container .title-page {
   color: #ab85ff;
 }
 
-
-.form-container h4 {
+/* Formulario */
+.form-container h2 {
   color: #ab85ff;
 }
-
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  padding: 30px 20px;
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=tel],
+.form-container input[type=password],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.form-container input[type=submit] {
+  font-weight: bold;
+  background-color: #DB5461;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.form-container input[type=submit]:hover {
+  background-color: white;
+  color: #DB5461;
+  border: 2px solid #DB5461;
 }
 
 /* Button whatsapp */
@@ -169,44 +175,7 @@ nav {
   background-color: #fff;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-input[type="submit"] {
-  font-weight: bold;
-  background-color: #DB5461;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 1px solid black;
-  border-radius: 100%;
-}
-
-input[type="submit"]:hover {
-  background-color: white;
-  color: #DB5461;
-  border: 2px solid black;
-}
-
-/* footer */
-
-.icon {
-  width: 25px;
-  height: 25px;
-}
-
+/*Estilos Footer */
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -214,11 +183,77 @@ footer {
   background-color: rgb(189, 193, 198);
   padding: 20px;
 }
-
-hr {
+footer .icon {
+  width: 25px;
+  height: 25px;
+}
+footer a {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+}
+footer hr {
   display: none;
 }
+footer .data {
+  grid-area: contacto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .data p {
+  margin-left: 7px;
+}
+footer .data .redes-sociales {
+  margin-top: 10px;
+}
+footer .data .redes-sociales a {
+  display: inline-block;
+}
+footer .horarios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .horarios .date-container {
+  grid-area: horarios;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+footer .horarios .date-container p {
+  margin-left: 7px;
+  cursor: default;
+}
+footer .map {
+  grid-area: mapa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .map iframe {
+  width: 90%;
+  height: 200px;
+}
 
+/* Medias Query */
+@media screen and (max-width: 380px) {
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .title-header {
+    font-size: 0.7em;
+    margin-left: 0;
+  }
+  .video-container iframe {
+    width: 285px;
+    margin: auto;
+  }
+}
 @media (max-width: 800px) {
   footer {
     display: flex;
@@ -226,51 +261,16 @@ hr {
     justify-content: center;
     align-items: center;
   }
-
-  hr {
+  footer hr {
     display: block;
     width: 100%;
     margin: 20px 0;
     height: 1px;
     background-color: black;
   }
-
+  footer .map {
+    width: 100%;
+  }
 }
 
-footer a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-.data {
-  grid-area: contacto;
-}
-
-.data p {
-  margin-left: 7px;
-}
-
-.redes-sociales {
-  margin-top: 10px;
-}
-
-.redes-sociales a {
-  display: inline-block;
-}
-
-.date-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  grid-area: horarios;
-}
-
-.date-container p {
-  margin-left: 7px;
-  cursor: default;
-}
-
-.map {
-  grid-area: mapa;
-}
+/*# sourceMappingURL=styles.css.map */
